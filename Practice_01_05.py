@@ -3,6 +3,7 @@
 
 product_price = dict()
 
+
 def stop_processing(check_str):
 
     proc_must_be_stopped = check_str == "stop"
@@ -10,6 +11,7 @@ def stop_processing(check_str):
         print(product_price)
 
     return proc_must_be_stopped
+
 
 def add_data():
 
