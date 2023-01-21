@@ -11,7 +11,7 @@ def number_entry(side_name):
 
     while True:
         try:
-            return int(input(f'Enter the numerical value of the {side_name} side.: '))
+            return int(input(f'Enter the numerical value of the {side_name} side: '))
         except:
             print("That's not a valid option!")
 
