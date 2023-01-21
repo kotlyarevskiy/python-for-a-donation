@@ -1,21 +1,24 @@
-# Practical lesson No. 2, task No. 3.
-# This program counts the number of vowels,
-# consonants and other characters in user-entered English text.
+# Practical lesson No. 5, task No. 1.
+# This program defines the variable x at the global, enclosing, local level.
 
-VOWELS = 'aeiou'
-CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
+x = 12
 
-vowels_count = 0
-consonants_count = 0
-other_count = 0
+print(f'GLOBAL x = {x}')
 
-for l in list(input('Enter the entire text: ')):
-    if l in VOWELS:
-        vowels_count += 1
-    elif l in CONSONANTS:
-        consonants_count += 1
-    else:
-        other_count += 1
+def enclosing_level():
 
-print(f'{consonants_count} consonants, {vowels_count} vowels, {other_count} other characters were detected in the text you entered.')
+	x = 13
 
+	print(f'ENCLOSING x = {x}')
+
+	def local_level():
+
+		x = 14
+
+		print(f'LOCAL x = {x}')
+
+	local_level()
+
+	print(f'ENCLOSING x = {x}')
+
+enclosing_level()
